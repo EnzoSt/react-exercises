@@ -6,17 +6,18 @@ export class Counter extends React.Component {
     count: this.props.initialValue,
   };
 
-  constructor(props) {
-    super(props);
+  // (ANSWER) component-lifecycle-01:
+  // If we use the method componentDidMount, the constructor is not required.
 
+  componentDidMount() {
     setInterval(() => {
-      this.setState(state => ({
+      this.setState((state) => ({
         count: state.count + this.props.incrementBy,
       }));
     }, 1000);
   }
 
   render() {
-    return <CounterDisplay count={this.state.count} />
+    return <CounterDisplay count={this.state.count} />;
   }
 }
