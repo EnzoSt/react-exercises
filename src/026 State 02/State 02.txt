@@ -1,0 +1,8 @@
+State 02
+
+When calling `setState` to increment the counter, should the parameter be a function or an object? Why?
+
+It should be a Function because in general when we use an object parameter, we can not relay on the 
+value being fresh when we have multiple calls to setStates, react batches thees type of calls and executes 
+them as soon as possible to optimize performance.
+So we can say: If the next value depends on the previous value of the state we should use a callback to call setState.
