@@ -1,0 +1,2 @@
+What happens if no `name` prop is passed to the `Welcome` component? Can you set a default value for the `name` prop?
+We could have some errors, to set a default value we can use .defaultProps, this is a static property of the class and it sets a default value for the prop.
