@@ -6,15 +6,20 @@ export class Counter extends React.Component {
     count: this.props.initialValue,
   };
 
-  // (ANSWER) component-lifecycle-01:
-  // If we use the method componentDidMount, the constructor is not required.
-
   componentDidMount() {
-    setInterval(() => {
+    this._interval = setInterval(() => {
       this.setState((state) => ({
         count: state.count + this.props.incrementBy,
       }));
     }, 1000);
+  }
+
+// (ANSWER) component-lifecycle-02:
+// We should use the lifecycle method "componentWillUnmount" in order to clear the interval when the component is unmounted.
+
+  componentWillUnmount(){
+    if(this._interval)
+    clearInterval(this._interval)
   }
 
   render() {
