@@ -40,6 +40,7 @@ export class Login extends React.Component {
           type="checkbox"
           onChange={this.handlerInputChange}
         ></input>
+        <button disabled={!this.state.username || !this.state.password}>Login</button>
       </div>
     );
   }
