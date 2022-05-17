@@ -5,7 +5,7 @@ export class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <p>Welcome, <strong>{this.props.name}</strong>!</p>
+        <p>Welcome, <strong>{this.props.name || "User"}</strong>!</p>
         <Age age={this.props.age} />
       </div>
     );
