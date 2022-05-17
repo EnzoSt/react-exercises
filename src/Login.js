@@ -16,7 +16,15 @@ export class Login extends React.Component {
     this.setState({
       [name]: type === "checkbox" ? checked : value,
     });
-  };
+  };    
+
+  handleResetState = () => {
+      this.setState({
+          username: "",
+          password: "",
+          remember: false
+      })
+  }
 
   render() {
     return (
@@ -40,6 +48,7 @@ export class Login extends React.Component {
           type="checkbox"
           onChange={this.handlerInputChange}
         ></input>
+        <button onClick={this.handleResetState}>Reset</button>
       </div>
     );
   }
