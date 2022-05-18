@@ -12,6 +12,7 @@ export class TodoList extends React.Component {
       this.setState((prevState) => ({
         items: [...prevState.items, newItem],
       }));
+      event.target.elements.newItem.value = "";
     }
   };
 
