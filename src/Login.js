@@ -26,6 +26,11 @@ export class Login extends React.Component {
       })
   }
 
+  onLogin = (event) => {
+    event.preventDefault();
+    console.log(this.state);
+  };
+
   render() {
     return (
       <div>
@@ -48,6 +53,7 @@ export class Login extends React.Component {
           type="checkbox"
           onChange={this.handlerInputChange}
         ></input>
+        <button type="submit" disabled={!this.state.username || !this.state.password} onClick={this.onLogin}>Login</button>
         <button onClick={this.handleResetState}>Reset</button>
       </div>
     );
