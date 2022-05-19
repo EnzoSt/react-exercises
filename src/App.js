@@ -8,11 +8,12 @@ import { Welcome } from "./Welcome";
 // import { TodoList } from "./TodoList";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
 import { Login } from "./Login";
+import { Container } from "./Container";
 
 export class App extends React.Component {
   render() {
     return (
-      <div>
+      <Container>
         {/* <Counter initialValue={0} incrementBy={1} /> */}
         {/* <Hello /> */}
         <Welcome />
@@ -22,7 +23,7 @@ export class App extends React.Component {
         <Login />
         {/* <TodoList /> */}
         {/* <UncontrolledLogin /> */}
-      </div>
+      </Container>
     );
   }
 }
