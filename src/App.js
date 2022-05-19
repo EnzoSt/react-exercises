@@ -7,7 +7,7 @@ import { Welcome } from "./Welcome";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
 // import { TodoList } from "./TodoList";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
-// import { Login } from "./Login";
+import { Login } from "./Login";
 
 export class App extends React.Component {
   render() {
@@ -19,7 +19,7 @@ export class App extends React.Component {
         {/* <InteractiveWelcome /> */}
         {/* <ClickCounter /> */}
         {/* <ClickTracker /> */}
-        {/* <Login /> */}
+        <Login />
         {/* <TodoList /> */}
         {/* <UncontrolledLogin /> */}
       </div>
