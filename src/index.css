@@ -2,3 +2,8 @@
     background-color: rgb(164 226 238);
     border: 3px solid #2f235f;
 }
+
+.container {
+    background-color: white;
+    border: 3px solid red;
+}
