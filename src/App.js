@@ -5,40 +5,61 @@ import { Welcome } from "./Welcome";
 // import { Counter } from "./Counter";
 // import { Hello } from "./Hello";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
-import { TodoList } from "./TodoList";
+// import { TodoList } from "./TodoList";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
 // import { Login } from "./Login";
 import { Container } from "./Container";
+import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./DisplayLanguage";
 
 export class App extends React.Component {
+  state ={
+     language: "en"
+  }
+ 
+  handleLanguageChange = (event) => {
+    this.setState({
+      language: event.target.value
+    })
+  }
+
   render() {
     return (
-      <Container title="My React Application">
-        {/* <Counter initialValue={0} incrementBy={1} /> */}
-        {/* <Hello /> */}
-        <Welcome />
-        {/* <InteractiveWelcome /> */}
-        {/* <ClickCounter /> */}
-        {/* <ClickTracker /> */}
-        {/* <Login /> */}
-        <TodoList
-          render={(items, RemoveItem) => {
-            return (
-              <ul>
-                {items.map((item, index) => (
-                  <li key={index}>
-                    {item}
-                    <button type="button" onClick={() => RemoveItem(index)}>
-                      Delete
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            );
-          }}
-        ></TodoList>
-        {/* <UncontrolledLogin /> */}
-      </Container>
+      <div>
+        <select value={this.state.language} onChange={this.handleLanguageChange}>
+          <option value="en">ENGLISH</option>
+          <option value="it">ITALIANO</option>
+        </select>
+        <Container title="My React Application">
+          {/* <Counter initialValue={0} incrementBy={1} /> */}
+          {/* <Hello /> */}
+          <Welcome />
+          {/* <InteractiveWelcome /> */}
+          {/* <ClickCounter /> */}
+          {/* <ClickTracker /> */}
+          {/* <Login /> */}
+          <LanguageContext.Provider value={this.state.language}>
+            <DisplayLanguage />
+          </LanguageContext.Provider>
+          {/* <TodoList
+            render={(items, RemoveItem) => {
+              return (
+                <ul>
+                  {items.map((item, index) => (
+                    <li key={index}>
+                      {item}
+                      <button type="button" onClick={() => RemoveItem(index)}>
+                        Delete
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              );
+            }}
+          ></TodoList> */}
+          {/* <UncontrolledLogin /> */}
+        </Container>
+      </div>
     );
   }
 }
