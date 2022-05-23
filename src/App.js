@@ -5,9 +5,9 @@ import { Welcome } from "./Welcome";
 // import { Counter } from "./Counter";
 // import { Hello } from "./Hello";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
-// import { TodoList } from "./TodoList";
+import { TodoList } from "./TodoList";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
-import { Login } from "./Login";
+// import { Login } from "./Login";
 import { Container } from "./Container";
 
 export class App extends React.Component {
@@ -20,8 +20,23 @@ export class App extends React.Component {
         {/* <InteractiveWelcome /> */}
         {/* <ClickCounter /> */}
         {/* <ClickTracker /> */}
-        <Login />
-        {/* <TodoList /> */}
+        {/* <Login /> */}
+        <TodoList
+          render={(items, RemoveItem) => {
+            return (
+              <ul>
+                {items.map((item, index) => (
+                  <li key={index}>
+                    {item}
+                    <button type="button" onClick={() => RemoveItem(index)}>
+                      Delete
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            );
+          }}
+        ></TodoList>
         {/* <UncontrolledLogin /> */}
       </Container>
     );
