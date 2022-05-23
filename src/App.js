@@ -14,7 +14,7 @@ import { DisplayLanguage } from "./DisplayLanguage";
 
 export class App extends React.Component {
   state ={
-     language: "en"
+     language: "it"
   }
  
   handleLanguageChange = (event) => {
@@ -30,6 +30,9 @@ export class App extends React.Component {
           <option value="en">ENGLISH</option>
           <option value="it">ITALIANO</option>
         </select>
+          <LanguageContext.Provider value={this.state.language}>
+            <DisplayLanguage />
+          </LanguageContext.Provider>
         <Container title="My React Application">
           {/* <Counter initialValue={0} incrementBy={1} /> */}
           {/* <Hello /> */}
@@ -38,9 +41,6 @@ export class App extends React.Component {
           {/* <ClickCounter /> */}
           {/* <ClickTracker /> */}
           {/* <Login /> */}
-          <LanguageContext.Provider value={this.state.language}>
-            <DisplayLanguage />
-          </LanguageContext.Provider>
           {/* <TodoList
             render={(items, RemoveItem) => {
               return (
