@@ -38,7 +38,8 @@ export class App extends React.Component {
           {/* <Counter initialValue={0} incrementBy={1} /> */}
           {/* <Hello /> */}
           <Welcome name="Leo"  age={21}/>
-          <Sum numbers={[5, 10, 3, 2]} />
+          {/* <Sum numbers={[5, 10, 3, 2]} /> */}
+          <Sum />
           {/* <InteractiveWelcome /> */}
           {/* <ClickCounter /> */}
           {/* <ClickTracker /> */}
