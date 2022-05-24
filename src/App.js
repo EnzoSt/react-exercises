@@ -13,6 +13,7 @@ import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { Sum } from "./Sum";
 import { CounterUseState } from "./CounterUseState";
+import { LoginUseState } from "./LoginUseState";
 
 export class App extends React.Component {
   state ={
@@ -42,6 +43,7 @@ export class App extends React.Component {
           {/* <Sum numbers={[5, 10, 3, 2]} /> */}
           {/* <Sum /> */}
           <CounterUseState initialCount={5} />
+          <LoginUseState />
           {/* <InteractiveWelcome /> */}
           {/* <ClickCounter /> */}
           {/* <ClickTracker /> */}
