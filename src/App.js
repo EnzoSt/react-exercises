@@ -36,7 +36,7 @@ export class App extends React.Component {
         <Container title="My React Application">
           {/* <Counter initialValue={0} incrementBy={1} /> */}
           {/* <Hello /> */}
-          <Welcome />
+          <Welcome name="Leo"  age={21}/>
           {/* <InteractiveWelcome /> */}
           {/* <ClickCounter /> */}
           {/* <ClickTracker /> */}
