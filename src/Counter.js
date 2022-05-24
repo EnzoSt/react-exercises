@@ -6,9 +6,6 @@ export class Counter extends React.Component {
     count: this.props.initialValue,
   };
 
-  // (ANSWER) component-lifecycle-01:
-  // If we use the method componentDidMount, the constructor is not required.
-
   componentDidMount() {
     setInterval(() => {
       this.setState((state) => ({
@@ -21,3 +18,6 @@ export class Counter extends React.Component {
     return <CounterDisplay count={this.state.count} />;
   }
 }
+
+// (ANSWER) component-lifecycle-01:
+  // If we use the method componentDidMount, the constructor is not required.

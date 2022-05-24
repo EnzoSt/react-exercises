@@ -12,10 +12,11 @@ import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { Sum } from "./Sum";
+import { CounterUseState } from "./CounterUseState";
 
 export class App extends React.Component {
   state ={
-     language: "it"
+     language: "en"
   }
  
   handleLanguageChange = (event) => {
@@ -37,9 +38,10 @@ export class App extends React.Component {
         <Container title="My React Application">
           {/* <Counter initialValue={0} incrementBy={1} /> */}
           {/* <Hello /> */}
-          <Welcome name="Leo"  age={21}/>
+          {/* <Welcome name="Leo"  age={21}/> */}
           {/* <Sum numbers={[5, 10, 3, 2]} /> */}
-          <Sum />
+          {/* <Sum /> */}
+          <CounterUseState initialCount={5} />
           {/* <InteractiveWelcome /> */}
           {/* <ClickCounter /> */}
           {/* <ClickTracker /> */}
