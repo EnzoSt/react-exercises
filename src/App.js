@@ -1,5 +1,5 @@
 import React from "react";
-import { Welcome } from "./Welcome";
+// import { Welcome } from "./Welcome";
 // import { ClickCounter } from "./ClickCounter";
 // import { ClickTracker } from "./ClickTracker";
 // import { Counter } from "./Counter";
@@ -11,9 +11,9 @@ import { Welcome } from "./Welcome";
 import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
-import { Sum } from "./Sum";
+// import { Sum } from "./Sum";
 import { CounterUseState } from "./CounterUseState";
-import { LoginUseState } from "./LoginUseState";
+// import { LoginUseState } from "./LoginUseState";
 
 export class App extends React.Component {
   state ={
@@ -42,8 +42,8 @@ export class App extends React.Component {
           {/* <Welcome name="Leo"  age={21}/> */}
           {/* <Sum numbers={[5, 10, 3, 2]} /> */}
           {/* <Sum /> */}
-          <CounterUseState initialCount={5} />
-          <LoginUseState />
+          <CounterUseState />
+          {/* <LoginUseState /> */}
           {/* <InteractiveWelcome /> */}
           {/* <ClickCounter /> */}
           {/* <ClickTracker /> */}
