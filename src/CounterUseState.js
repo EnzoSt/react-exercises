@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-export function CounterUseState({ initialCount = 0 }) {
-  const [counter, setCounter] = useState(initialCount);
+export function CounterUseState() {
+  const [counter, setCounter] = useState(0);
 
   function onCounterChange(counter) {
     console.log(`Counter changed to ${counter}`);
