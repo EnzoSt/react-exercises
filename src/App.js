@@ -2,7 +2,7 @@ import React from "react";
 // import { Welcome } from "./Welcome";
 // import { ClickCounter } from "./ClickCounter";
 // import { ClickTracker } from "./ClickTracker";
-import { Counter } from "./Counter";
+// import { Counter } from "./Counter";
 // import { Hello } from "./Hello";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
 // import { TodoList } from "./TodoList";
@@ -11,6 +11,7 @@ import { Counter } from "./Counter";
 import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
+import { GithubUser } from "./GithubUser";
 // import { Sum } from "./Sum";
 // import { CounterUseState } from "./CounterUseState";
 // import { LoginUseState } from "./LoginUseState";
@@ -48,7 +49,8 @@ export class App extends React.Component {
             <DisplayLanguage />
           </LanguageContext.Provider>
         <Container title="My React Application">
-          <Counter />
+          <GithubUser username="EnzoSt" />
+          {/* <Counter /> */}
           {/* <Counter initialValue={0} incrementBy={1} /> */}
           {/* <Hello /> */}
           {/* <Welcome name="Leo"  age={21}/> */}
