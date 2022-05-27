@@ -11,7 +11,8 @@ import React from "react";
 import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
-import { GithubUser } from "./GithubUser";
+// import { GithubUser } from "./GithubUser";
+import { GithubUserList } from "./GithubUserList";
 // import { Sum } from "./Sum";
 // import { CounterUseState } from "./CounterUseState";
 // import { LoginUseState } from "./LoginUseState";
@@ -49,7 +50,7 @@ export class App extends React.Component {
             <DisplayLanguage />
           </LanguageContext.Provider>
         <Container title="My React Application">
-          <GithubUser username="EnzoSt" />
+          <GithubUserList username="EnzoSt" />
           {/* <Counter /> */}
           {/* <Counter initialValue={0} incrementBy={1} /> */}
           {/* <Hello /> */}
