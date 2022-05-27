@@ -14,7 +14,8 @@ import { DisplayLanguage } from "./DisplayLanguage";
 // import { GithubUser } from "./GithubUser";
 // import { GithubUserList } from "./GithubUserList";
 // import { HookCounter } from "./HookCounter";
-import { ControlledForm } from "./controlledForm";
+// import { ControlledForm } from "./controlledForm";
+import { GithubUser } from "./GithubUser";
 // import { Sum } from "./Sum";
 // import { CounterUseState } from "./CounterUseState";
 // import { LoginUseState } from "./LoginUseState";
@@ -37,8 +38,9 @@ export function App() {
             <DisplayLanguage />
           </LanguageContext.Provider>
         <Container title="My React Application">
+          <GithubUser username="enzoSt" />
+          {/* <ControlledForm /> */}
           {/* <HookCounter /> */}
-          <ControlledForm />
           </Container>
        {/* <Welcome /> */}
        {/* {showCounter && <Counter />}
