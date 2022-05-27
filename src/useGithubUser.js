@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 export function useGithubUser(username) {
   const [user, setUser] = useState();
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
 
   useEffect(() => {
     async function fetchData() {
@@ -13,13 +15,16 @@ export function useGithubUser(username) {
         console.log(result);
 
         setUser(result);
+        setLoading(false);
       } catch (error) {
         console.log(error);
+        setError(error);
+        setLoading(false);
       }
     }
 
     fetchData();
   }, [username]);
 
-  return {user};
+  return {user, loading, error};
 }
