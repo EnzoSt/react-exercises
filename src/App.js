@@ -15,7 +15,7 @@ import { DisplayLanguage } from "./DisplayLanguage";
 // import { GithubUserList } from "./GithubUserList";
 // import { HookCounter } from "./HookCounter";
 // import { FilteredList } from "./FilteredList";
-import { CarDetails } from "./CarDetails";
+// import { CarDetails } from "./CarDetails";
 // import { ControlledForm } from "./controlledForm";
 // import { GithubUser } from "./GithubUser";
 // import { Sum } from "./Sum";
@@ -34,11 +34,11 @@ import { CarDetails } from "./CarDetails";
 
 // ];
 
-const CarDefault = {
-  model: "Ferrari",
-  year: "2020",
-  color: "red"
-};
+// const CarDefault = {
+//   model: "Ferrari",
+//   year: "2020",
+//   color: "red"
+// };
 
 export function App() {
   // const [showCounter, setShowCounter] = useState(true);
@@ -58,7 +58,7 @@ export function App() {
             <DisplayLanguage />
           </LanguageContext.Provider>
         <Container title="My React Application">
-          <CarDetails initialData={CarDefault} />
+          {/* <CarDetails initialData={CarDefault} /> */}
           {/* <FilteredList items={users} /> */}
           {/* <GithubUser username="enzoSt" /> */}
           {/* <ControlledForm /> */}
