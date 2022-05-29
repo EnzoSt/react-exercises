@@ -14,24 +14,31 @@ import { DisplayLanguage } from "./DisplayLanguage";
 // import { GithubUser } from "./GithubUser";
 // import { GithubUserList } from "./GithubUserList";
 // import { HookCounter } from "./HookCounter";
-import { FilteredList } from "./FilteredList";
+// import { FilteredList } from "./FilteredList";
+import { CarDetails } from "./CarDetails";
 // import { ControlledForm } from "./controlledForm";
 // import { GithubUser } from "./GithubUser";
 // import { Sum } from "./Sum";
 // import { CounterUseState } from "./CounterUseState";
 // import { LoginUseState } from "./LoginUseState";
 
-const users = [
-  { id: 1, name: "Leo", age: 31 },
-  { id: 2, name: "Lucia", age: 28 },
-  { id: 3, name: "Giacomo", age: 17 },
-  { id: 4, name: "Edoardo", age: 21 },
-  { id: 5, name: "Matteo", age: 15 },
-  { id: 6, name: "Fabiana", age: 18 },
-  { id: 7, name: "Alessia", age: 16 },
-  { id: 8, name: "Maria", age: 26 },
+// const users = [
+//   { id: 1, name: "Leo", age: 31 },
+//   { id: 2, name: "Lucia", age: 28 },
+//   { id: 3, name: "Giacomo", age: 17 },
+//   { id: 4, name: "Edoardo", age: 21 },
+//   { id: 5, name: "Matteo", age: 15 },
+//   { id: 6, name: "Fabiana", age: 18 },
+//   { id: 7, name: "Alessia", age: 16 },
+//   { id: 8, name: "Maria", age: 26 },
 
-];
+// ];
+
+const CarDefault = {
+  model: "Ferrari",
+  year: "2020",
+  color: "red"
+};
 
 export function App() {
   // const [showCounter, setShowCounter] = useState(true);
@@ -51,7 +58,8 @@ export function App() {
             <DisplayLanguage />
           </LanguageContext.Provider>
         <Container title="My React Application">
-          <FilteredList items={users} />
+          <CarDetails initialData={CarDefault} />
+          {/* <FilteredList items={users} /> */}
           {/* <GithubUser username="enzoSt" /> */}
           {/* <ControlledForm /> */}
           {/* <HookCounter /> */}
