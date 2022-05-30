@@ -3,6 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
 import { GithubUser } from "./GithubUser";
+import { CarDetails } from "./CarDetails";
+import { ClickCounter} from "./ClickCounter";
+import { Hello } from "./Hello";
 
 export function App() {
   return (
@@ -11,6 +14,9 @@ export function App() {
         <Route path="/" element={<Welcome name={"Enzo"} />} />
         <Route path= "user/:username" element={<GithubUser />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/carDetails" element={<CarDetails />} />
+        <Route path="/clickCounter" element={<ClickCounter />} />
+        <Route path="/hello" element={<Hello />} />
       </Routes>
     </div>
   );
