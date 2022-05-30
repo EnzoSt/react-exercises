@@ -9,7 +9,7 @@ export function App() {
     <div>
       <Routes>
         <Route path="/" element={<Welcome name={"Enzo"} />} />
-        <Route path= "/:username" element={<GithubUser />} />
+        <Route path= "user/:username" element={<GithubUser />} />
         <Route path="/counter" element={<Counter />} />
       </Routes>
     </div>
