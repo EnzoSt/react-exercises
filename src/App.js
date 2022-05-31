@@ -1,10 +1,10 @@
 //Add a new Route to the users/:username path that renders a ShowGithubUser component that receives the username as a path parameter and renders the GithubUser component
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
 import { GithubUser } from "./GithubUser";
 import { CarDetails } from "./CarDetails";
-import { ClickCounter} from "./ClickCounter";
+import { ClickCounter } from "./ClickCounter";
 import { Hello } from "./Hello";
 
 export function App() {
@@ -12,52 +12,24 @@ export function App() {
     <div>
       <Routes>
         <Route path="/" element={<Welcome name={"Enzo"} />} />
-        <Route path= "user/:username" element={<GithubUser />} />
+        <Route path="user/:username" element={<GithubUser />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/carDetails" element={<CarDetails />} />
         <Route path="/clickCounter" element={<ClickCounter />} />
         <Route path="/hello" element={<Hello />} />
+        <Route
+          path="*"
+          element={
+            <div>
+              <p>Page Not Found</p>
+              <Link to="/">Go Back</Link>
+            </div>
+          }
+        />
       </Routes>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //----------------------------------------------------------------------------------------------------------------------
 // import React, { useState } from "react";
