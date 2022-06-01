@@ -5,13 +5,13 @@ import { Welcome } from "./Welcome";
 import { Hello } from "./Hello";
 import { GithubUserList } from "./GithubUserList";
 
-
 export function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Welcome name={"Enzo"} />} />
         <Route path="githubList" element={<GithubUserList />}>
+          <Route index element={<p>Add a user and select it</p>} />
           <Route path=":username" element={<useGithubUser />} />
         </Route>
         {/* <Route path="user/:username" element={<GithubUser />} /> */}
