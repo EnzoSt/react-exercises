@@ -4,12 +4,17 @@ const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export function useGithubUser(username) {
   // const { data, error } = useSWR(`https://api.github.com/users/${username}`, fetcher);
-  const { data, error } = useSWR(!username ? null : `https://api.github.com/users/${username}`, fetcher);
+  const { data, error, mutate } = useSWR(!username ? null : `https://api.github.com/users/${username}`, fetcher);
+
+  function handleRefetch() {
+    mutate();
+  }
 
   return {
     loading: !data && !error,
     user: data,
     error,
+    refetch: handleRefetch,
   };
 }
 
