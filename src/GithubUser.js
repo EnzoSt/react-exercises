@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser() {
-  const { username} = useParams()
-  const {user} = useGithubUser(username);
+  const { username } = useParams()
+  const { user } = useGithubUser(username);
 
   if (!user) {
     return <h2>Loading...</h2>;
